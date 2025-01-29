@@ -79,11 +79,12 @@ class Pedido {
         try {
             $pdo = MySql::conectar();
     
-            $query = "SELECT p.*, pi.produto_id, pi.quantidade, pi.preco, m.nome, u.nome AS usuario_nome 
+            $query = "SELECT p.*, pi.produto_id, pi.quantidade, pi.preco, m.nome, u.nome AS usuario_nome, u.endereco AS usuario_endereco, u.nivel AS usuario_nivel 
                       FROM `tb_pedidos` p 
                       JOIN `tb_pedido_itens` pi ON p.id = pi.pedido_id 
                       JOIN `tb_produtos` m ON pi.produto_id = m.id 
                       JOIN `tb_user` u ON p.usuario_id = u.id";
+                      
             
             if ($status) {
                 $query .= " WHERE p.`status` = ?";

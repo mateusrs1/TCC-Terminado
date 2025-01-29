@@ -24,6 +24,9 @@
                 <label for="password" class="title">Senha:</label>
                 <input type="password" id="password" name="password" required>
 
+                <label for="endereco" class="title">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+
                 <input type="submit" value="Cadastrar agora" class="btn-submit">
             </form>
             <p class="signup-link">Já tem uma conta? <a href="login">Login</a></p>
@@ -32,8 +35,9 @@
                 $name = $_POST['name'];
                 $email = $_POST['email'];
                 $password = $_POST['password'];
+                $endereco = $_POST['endereco'];
 
-                if (Usuario::cadastrarUsuario($name, $password, $email)) { 
+                if (Usuario::cadastrarUsuario($name, $password, $email, $endereco)) { 
                     echo '<p class="success">Cadastro bem-sucedido! <a href="login">Faça login</a>.</p>';
                 } else {
                     echo '<p class="error">Erro no cadastro. O email já está em uso.</p>';

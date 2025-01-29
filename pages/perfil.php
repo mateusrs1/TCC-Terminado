@@ -12,7 +12,9 @@ $mensagem = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
+    $endereco = $_POST['endereco'];
     $imagem = $usuario['img'];
+    
     if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
         $imagemTmp = $_FILES['imagem']['tmp_name'];
         $imagemNome = basename($_FILES['imagem']['name']);
@@ -26,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Atualiza as informações do usuário
-    if (Usuario::atualizarUsuario($nome, $senha, $imagem)) {
+    if (Usuario::atualizarUsuario($nome, $senha, $endereco, $imagem)) {
         // Recarrega as informações do usuário atualizadas
         $usuario = Usuario::obterUsuario($email);
         $mensagem = "<p>Informações atualizadas com sucesso!</p>";
@@ -44,7 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha">
-        <small>Deixe em branco para manter a senha atual.</small>
+        <small>Caso não queira trocar a senha, coloque sua senha atual.</small>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" value="<?php echo htmlspecialchars($usuario['endereco']); ?>" required>
         
         <label for="imagem">Imagem de Perfil:</label>
         <input type="file" id="imagem" name="imagem">

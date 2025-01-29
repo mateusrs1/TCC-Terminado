@@ -2,19 +2,19 @@
 
 class Usuario {
 
-    public static function atualizarUsuario($nome, $senha, $imagem) {
+    public static function atualizarUsuario($nome, $senha, $imagem, $endereco) {
         try {
             $pdo = MySql::conectar();
 
             // Verifica se uma nova senha foi fornecida
             if (!empty($senha)) {
                 // Atualiza com nova senha
-                $sql = $pdo->prepare("UPDATE tb_user SET nome = ?, senha = ?, img = ? WHERE email = ?");
-                $sql->execute([$nome, $senha, $imagem, $_SESSION['email']]);
+                $sql = $pdo->prepare("UPDATE tb_user SET nome = ?, senha = ?, endereco = ?, img = ? WHERE email = ?");
+                $sql->execute([$nome, $senha, $imagem, $endereco, $_SESSION['email']]);
             } else {
                 // Atualiza sem alterar a senha
                 $sql = $pdo->prepare("UPDATE tb_user SET nome = ?, img = ? WHERE email = ?");
-                $sql->execute([$nome, $imagem, $_SESSION['email']]);
+                $sql->execute([$nome, $imagem, $endereco, $_SESSION['email']]);
             }
 
             return true;
@@ -51,6 +51,7 @@ class Usuario {
                     $_SESSION['nivel'] = $info['nivel'];
                     $_SESSION['xp'] = $info['xp'];
                     $_SESSION['user_id'] = $info['id'];
+                    $_SESSION['endereco'] = $info['endereco'];
                     return true;
                 } else {
                     error_log("Senha incorreta para o email: " . $email);
@@ -66,7 +67,7 @@ class Usuario {
         }
     }
 
-    public static function cadastrarUsuario($nome, $senha, $email) {
+    public static function cadastrarUsuario($nome, $senha, $email, $endereco) {
         try {
             if (self::userExists($email)) {
                 return false;
@@ -76,9 +77,10 @@ class Usuario {
             $nivel = 1;
             $xp = 0;
             $cargo = "USUARIO";
+           
 
-            $sql = MySql::conectar()->prepare("INSERT INTO tb_user (nome, senha, img, email, cargo, nivel, xp) VALUES (?, ?, ?, ?, ?, ?, ?)");
-            return $sql->execute([$nome, $senha, $imagem, $email, $cargo, $nivel, $xp]);
+            $sql = MySql::conectar()->prepare("INSERT INTO tb_user (nome, senha, img, email, cargo, nivel, xp, endereco) VALUES (?, ?, ?, ?, ?, ?, ?,?)");
+            return $sql->execute([$nome, $senha, $imagem, $email, $cargo, $nivel, $xp, $endereco]);
         } catch (PDOException $e) {
             error_log("Erro ao cadastrar usuário: " . $e->getMessage());
             return false;

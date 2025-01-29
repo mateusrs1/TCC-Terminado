@@ -255,3 +255,216 @@ Stack trace:
 [27-Dec-2024 17:13:21 America/Sao_Paulo] PHP Warning:  Undefined array key "ID" in D:\xampp\htdocs\TCC-2.0\pages\painel.php on line 56
 [27-Dec-2024 17:13:21 America/Sao_Paulo] PHP Warning:  Undefined array key "ID" in D:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
 [27-Dec-2024 17:13:21 America/Sao_Paulo] PHP Warning:  Undefined array key "ID" in D:\xampp\htdocs\TCC-2.0\pages\painel.php on line 70
+[03-Jan-2025 16:12:24 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 53
+[03-Jan-2025 16:12:33 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 53
+[03-Jan-2025 16:12:36 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 53
+[03-Jan-2025 16:12:40 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 53
+[03-Jan-2025 16:12:43 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 53
+[03-Jan-2025 16:13:04 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 53
+[03-Jan-2025 16:13:14 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 53
+[03-Jan-2025 16:13:18 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 53
+[03-Jan-2025 16:17:52 America/Sao_Paulo] Email não encontrado: mateusrshu1@gmail.com
+[03-Jan-2025 16:18:22 America/Sao_Paulo] Email não encontrado: mateusrshu1@gmail.com
+[08-Jan-2025 11:08:51 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\perfil.php on line 15
+[08-Jan-2025 11:10:59 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\perfil.php on line 15
+[08-Jan-2025 11:15:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\perfil.php on line 15
+[08-Jan-2025 11:17:29 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\perfil.php on line 15
+[08-Jan-2025 11:17:29 America/Sao_Paulo] Erro ao atualizar usuário: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[08-Jan-2025 11:18:41 America/Sao_Paulo] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Usuario::cadastrarUsuario(), 3 passed in C:\xampp2\htdocs\tcc\pages\cadastro.php on line 39 and exactly 4 expected in C:\xampp2\htdocs\tcc\classes\Usuario.php:70
+Stack trace:
+#0 C:\xampp2\htdocs\tcc\pages\cadastro.php(39): Usuario::cadastrarUsuario('asd', '123', 'mateusrshu1@gma...')
+#1 C:\xampp2\htdocs\tcc\index.php(15): include('C:\\xampp2\\htdoc...')
+#2 {main}
+  thrown in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 70
+[08-Jan-2025 11:20:24 America/Sao_Paulo] PHP Warning:  Undefined variable $endereco in C:\xampp2\htdocs\tcc\pages\cadastro.php on line 39
+[08-Jan-2025 11:20:24 America/Sao_Paulo] Erro ao cadastrar usuário: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'endereco' cannot be null
+[08-Jan-2025 11:21:45 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\cadastro.php on line 38
+[08-Jan-2025 11:21:45 America/Sao_Paulo] Erro ao cadastrar usuário: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'endereco' cannot be null
+[08-Jan-2025 11:21:51 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\cadastro.php on line 38
+[08-Jan-2025 11:21:51 America/Sao_Paulo] Erro ao cadastrar usuário: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'endereco' cannot be null
+[08-Jan-2025 11:22:13 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\cadastro.php on line 38
+[08-Jan-2025 11:22:13 America/Sao_Paulo] Erro ao cadastrar usuário: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'endereco' cannot be null
+[08-Jan-2025 11:24:24 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\cadastro.php on line 38
+[08-Jan-2025 11:24:24 America/Sao_Paulo] Erro ao cadastrar usuário: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'endereco' cannot be null
+[08-Jan-2025 11:24:55 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\perfil.php on line 15
+[08-Jan-2025 11:24:55 America/Sao_Paulo] Erro ao atualizar usuário: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[08-Jan-2025 11:27:17 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\perfil.php on line 15
+[08-Jan-2025 11:27:17 America/Sao_Paulo] Erro ao atualizar usuário: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[08-Jan-2025 11:27:22 America/Sao_Paulo] Erro ao atualizar usuário: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[08-Jan-2025 11:27:31 America/Sao_Paulo] Erro ao atualizar usuário: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:32:27 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Undefined variable $user in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:21 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:37:46 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 11:50:47 America/Sao_Paulo] PHP Warning:  Undefined array key "endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:07:07 America/Sao_Paulo] PHP Warning:  Undefined array key "usuario_endereco" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 88
+[08-Jan-2025 12:10:48 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected variable "$sql" in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 82
+[08-Jan-2025 12:11:08 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected identifier "JOIN" in C:\xampp2\htdocs\tcc\classes\Pedido.php on line 87
+[08-Jan-2025 12:11:23 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected identifier "JOIN" in C:\xampp2\htdocs\tcc\classes\Pedido.php on line 87
+[08-Jan-2025 12:11:46 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected identifier "JOIN" in C:\xampp2\htdocs\tcc\classes\Pedido.php on line 87
+[08-Jan-2025 12:13:11 America/Sao_Paulo] Erro ao atualizar usuário: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[08-Jan-2025 12:13:40 America/Sao_Paulo] Erro ao atualizar usuário: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[08-Jan-2025 12:22:00 America/Sao_Paulo] Email não encontrado: admin@gmail.com
+[08-Jan-2025 12:22:37 America/Sao_Paulo] Email não encontrado: admin@gmail.com
+[08-Jan-2025 12:27:53 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:27:53 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:27:55 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:27:55 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:27:56 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:27:56 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:27:57 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:27:57 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:28:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:28:58 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:29:57 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:29:57 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:29:58 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:29:58 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:30:00 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:30:00 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:30:10 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:30:10 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:30:20 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:30:20 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:30:23 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:30:23 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:34:25 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type bool in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:34:25 America/Sao_Paulo] PHP Deprecated:  Automatic conversion of false to array is deprecated in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 129
+[08-Jan-2025 12:36:12 America/Sao_Paulo] Erro ao atualizar usuário: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:47:37 America/Sao_Paulo] PHP Warning:  Undefined array key "valortotal" in C:\xampp2\htdocs\tcc\pages\pedidos.php on line 90
+[08-Jan-2025 12:55:03 America/Sao_Paulo] Email não encontrado: asd
+[08-Jan-2025 13:03:54 America/Sao_Paulo] Senha incorreta para o email: samuca@samedev.com
+[08-Jan-2025 13:18:50 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp2\htdocs\tcc\classes\Usuario.php:40
+Stack trace:
+#0 C:\xampp2\htdocs\tcc\pages\login.php(37): Usuario::loginUsuario('mateusrshu1@gma...', '123')
+#1 C:\xampp2\htdocs\tcc\index.php(23): include('C:\\xampp2\\htdoc...')
+#2 {main}
+  thrown in C:\xampp2\htdocs\tcc\classes\Usuario.php on line 40

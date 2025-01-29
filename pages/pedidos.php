@@ -42,10 +42,13 @@ if ($_SESSION['cargo'] === 'ADMIN' || $_SESSION['cargo'] === 'COZINHEIRO') {
                     <tr>
                         <th>ID</th>
                         <th>Usuário</th>
+                        <th>Nível</th>
                         <th>Status</th>
                         <th>Itens</th>
                         <th>Data de Criação</th>
                         <th>Atualizar Status</th>
+                        <th>Endereço</th>
+                        <th>Valor Total</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -53,6 +56,7 @@ if ($_SESSION['cargo'] === 'ADMIN' || $_SESSION['cargo'] === 'COZINHEIRO') {
                         <tr>
                             <td><?php echo $pedido['id']; ?></td>
                             <td><?php echo $pedido['usuario_nome']; ?></td>
+                            <td><?php echo $pedido['usuario_nivel']; ?></td>
                             <td><?php echo $pedido['status']; ?></td>
                             <td>
                                 <ul>
@@ -84,6 +88,8 @@ if ($_SESSION['cargo'] === 'ADMIN' || $_SESSION['cargo'] === 'COZINHEIRO') {
                                     <input type="submit" value="Atualizar Status">
                                 </form>
                             </td>
+                            <td><?php echo $pedido['usuario_endereco']; ?></td>
+                            <td>R$: <?php echo $pedido['valor_total']; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

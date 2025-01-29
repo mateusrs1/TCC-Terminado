@@ -14,7 +14,7 @@
 
 	spl_autoload_register($autoload);
 
-	define('INCLUDE_PATH', 'http://localhost/TCC-2.0/');
+	define('INCLUDE_PATH', 'http://localhost/tcc/');
 	define('HOST', 'localhost');
 	define('USER', 'root');
 	define('PASSWORD', '');
