@@ -1,129 +1,194 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif; /* Define a família de fontes para o corpo do documento */
-    margin: 0; /* Remove margens padrão do corpo do documento */
-    display: flex; /* Usa o modelo de layout flexível para o corpo do documento */
-    height: 100vh; /* Faz com que o corpo ocupe 100% da altura da viewport */
-    background-color: #f2f2f2; /* Define a cor de fundo para todo o corpo do documento */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f2f2f2;
 }
 
-.titulo{
-    font-size:10%; /* Define o tamanho da fonte para elementos com a classe 'titulo' */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Define a família de fontes para elementos com a classe 'titulo' */
+.titulo {
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+    margin: 5px 10px;
+    margin-bottom: 20px;
 }
 
-.sidebar { /* Estilos para a barra lateral */
-    width: 300px; /* Largura da barra lateral */
-    background-color: #ffc107; /* Cor de fundo da barra lateral */
-    padding: 20px; /* Espaçamento interno da barra lateral */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra à direita da barra lateral */
-    height: 100%; /* Faz com que a barra lateral ocupe 100% da altura disponível */
+.sidebar {
+    width: 350px;
+    background-color: #ffc107;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.sidebar .logo { /* Estilos para o elemento com a classe 'logo' dentro da barra lateral */
-    width: 250px; /* Largura da logo dentro da barra lateral */
-    background-color: #ffc107; /* Cor de fundo da logo */
-    padding-left: 20px; /* Espaçamento interno à esquerda da logo */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra à direita da logo */
+.sidebar .profile {
+    text-align: center;
+    cursor: pointer;
 }
 
-.sidebar .titulo {
-    color: #fff; /* Cor do texto para elementos com a classe 'titulo' dentro da barra lateral */
-    font-size: 1.5em; /* Tamanho da fonte para elementos com a classe 'titulo' dentro da barra lateral */
-    margin-bottom: 20px; /* Margem inferior para elementos com a classe 'titulo' dentro da barra lateral */
-    text-align: center; /* Alinhamento central do texto para elementos com a classe 'titulo' dentro da barra lateral */
+.sidebar .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px #333 solid;
+    background-color: #666;
+    object-fit: cover;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.sidebar h3 {
+    color: #f17840;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .sidebar nav ul {
-    list-style: none; /* Remove os estilos padrão de lista (pontos) para listas dentro da barra lateral */
-    padding: 0; /* Remove o preenchimento padrão para listas dentro da barra lateral */
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .sidebar nav ul li {
-    margin-bottom: 15px; /* Margem inferior para itens de lista dentro da barra lateral */
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .sidebar nav ul li a {
-    color: #fff; /* Cor do texto para links dentro da barra lateral */
-    text-decoration: none; /* Remove o sublinhado dos links dentro da barra lateral */
-    font-size: 1.2em; /* Tamanho da fonte para links dentro da barra lateral */
-    display: block; /* Faz com que os links dentro da barra lateral sejam exibidos como blocos */
-    padding: 10px; /* Espaçamento interno dos links dentro da barra lateral */
-    border-radius: 4px; /* Arredonda os cantos dos links dentro da barra lateral */
-    background-color: #ff5722; /* Cor de fundo dos links dentro da barra lateral */
-    text-align: center; /* Alinha o texto dos links ao centro dentro da barra lateral */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    padding: 15px 35px; 
+    border-radius: 4px;
+    background-color: #ff5722;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .sidebar nav ul li a:hover {
-    background-color: #e64a19; /* Cor de fundo dos links ao passar o mouse dentro da barra lateral */
+    background-color: #e64a19;
+}
+
+
+.sidebar .logo {
+    width: 250px;
+    padding-left: 20px;
+    margin-bottom: 20px;
 }
 
 .main-content {
-    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço restante disponível */
-    padding: 20px; /* Espaçamento interno do conteúdo principal */
-    background-color: #fff; /* Cor de fundo do conteúdo principal */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra à esquerda do conteúdo principal */
-    height: 100%; /* Faz com que o conteúdo principal ocupe 100% da altura disponível */
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
 }
 
 .main-content h2 {
-    font-size: 2em; /* Tamanho da fonte para elementos h2 dentro do conteúdo principal */
-    margin-top: 0; /* Remove a margem superior padrão para elementos h2 dentro do conteúdo principal */
-    color: #333; /* Cor do texto para elementos h2 dentro do conteúdo principal */
+    font-size: 2rem;
+    color: #333;
 }
 
 .main-content p {
-    font-size: 1.2em; /* Tamanho da fonte para parágrafos dentro do conteúdo principal */
-    color: #666; /* Cor do texto para parágrafos dentro do conteúdo principal */
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-    background-color: #a0a0a0; /* Cor de fundo dos cards */
-    padding: 15px; /* Espaçamento interno dos cards */
-    margin: 10px; /* Margem externa dos cards */
-    margin-top: 20px; /* Margem superior dos cards */
-    border-radius: 5px; /* Arredonda os cantos dos cards */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra dos cards */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transições suaves ao passar o mouse sobre os cards */
-    width: 300px; /* Largura fixa dos cards */
-    text-align: center; /* Centraliza o conteúdo dos cards */
+    display: flex;
+    flex-direction: column; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    align-items: center;
+    width: 250px;
+    justify-content: space-between;
+    overflow: hidden; 
 }
 
 .card:hover {
-    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse sobre os cards */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse sobre os cards */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .imgcardapio {
-    width: 100%; /* Faz com que a imagem dos cards ocupe 100% da largura */
-    height: auto; /* Mantém a proporção da altura da imagem dos cards */
-    border-radius: 5px; /* Arredonda os cantos da imagem dos cards */
-    display: block; /* Faz com que a imagem dos cards seja exibida como bloco */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .buttoncard {
-    margin-top: 20px; /* Espaçamento superior do botão */
-    padding: 10px 50px; /* Espaçamento interno do botão */
-    background-color: #ff5722; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    border: none; /* Remove a borda do botão */
-    border-radius: 3px; /* Arredonda os cantos do botão */
-    font-size: 20px; /* Tamanho da fonte do botão */
-    cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transições suaves ao passar o mouse sobre o botão */
+    display: block;
+    width: 90%;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .buttoncard:hover {
-    background-color: #e64a19; /* Cor de fundo do botão ao passar o mouse */
-    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse sobre o botão */
+    background-color: #e64a19;
+    transform: translateY(-2px);
 }
 
 .textcard {
-    margin: 15px; /* Margem ao redor do texto dos cards */
-    margin-bottom: -10px; /* Margem inferior ajustada para alinhamento do texto nos cards */
+    font-size: 1.2rem;
+    color: #333;
 }
 
+.textcard h1 {
+    font-size: 1.3rem;
+}
 
-
-/*eu te odeio gordao, Yuri Mateus Franco especificadamente esse troxa, odeio muito mesmo*/
+.logout-button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.logout-button:hover {
+    background-color: #ff1c2b;
+}

@@ -9,8 +9,7 @@
 
 
 	define('INCLUDE_PATH','http://localhost/TCC-2.0/');
-
-	//Conectar com banco de dados!
+	
 	define('HOST','localhost');
 	define('USER','root');
 	define('PASSWORD','');

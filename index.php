@@ -3,16 +3,22 @@ include("config.php");
 
 $url = isset($_GET['url']) ? $_GET['url'] : 'index';
 $url = basename($url);
-$pagePath = "pages/" . $url . ".html";
+$pagePath = "pages/" . $url . ".php";
 
-if (file_exists($pagePath) || file_exists("pages/" . $url . ".php")) {
-    if ($url == 'cadastro' || $url == 'login') {
-        include("pages/" . $url . ".php");
-    } else {
-        include("components/sidebar.php");
+$publicPages = ['login', 'cadastro'];
+
+if (@isset($_SESSION['login']) || in_array($url, $publicPages)) {
+    if (file_exists($pagePath)) {
+        if (!in_array($url, $publicPages)) {
+            include("components/sidebar.php");
+        }
         include($pagePath);
-        include("components/footer.php");
+        if (!in_array($url, $publicPages)) {
+            include("components/footer.php");
+        }
+    } else {
+        include("pages/404.php");
     }
 } else {
-    include("pages/404.html");
+    include("pages/login.php");
 }
