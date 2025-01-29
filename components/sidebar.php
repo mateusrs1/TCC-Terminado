@@ -1,4 +1,9 @@
 <?php
+if (!isset($_SESSION['cargo'])) {
+    header('Location: ' . INCLUDE_PATH . 'logout');
+    exit();
+}
+
 $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 ?>
 
@@ -19,14 +24,17 @@ $url = isset($_GET['url']) ? $_GET['url'] : 'home';
             <h2><?php echo $_SESSION['nome']; ?></h2>
             <h3><?php echo $_SESSION['cargo']; ?></h3>
             <h3>Nível <?php echo $_SESSION['nivel']; ?></h3>
-            <a href="<?php echo INCLUDE_PATH; ?>logout.php" class="logout-button">Sair</a>
+            <a href="<?php echo INCLUDE_PATH; ?>logout.php" class="button">Sair</a>
+            <?php if ($_SESSION['cargo'] === 'ADMIN') { ?>
+                <span> | </span>
+                <a href="<?php echo INCLUDE_PATH; ?>painel" class="button">Painel</a>
+            <?php } ?>
         </a>
     </div>
     <nav class="menu">
         <ul>
-            <li><a href="<?php echo INCLUDE_PATH; ?>"><i class="fa-solid fa-burger"></i> Cardapio</a></li>
+            <li><a href="<?php echo INCLUDE_PATH; ?>"><i class="fa-solid fa-burger"></i> Cardápio</a></li>
             <li><a href="<?php echo INCLUDE_PATH; ?>carrinho"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a></li>
-            <li><a href="<?php echo INCLUDE_PATH; ?>marmitas"><i class="fa-solid fa-bowl-food"></i> Marmitas</a></li>
             <li><a href="<?php echo INCLUDE_PATH; ?>pedidos"><i class="fa-regular fa-calendar-check"></i> Pedidos</a></li>
         </ul>
     </nav>

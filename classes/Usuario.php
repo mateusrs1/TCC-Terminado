@@ -8,7 +8,6 @@ class Usuario {
             $sql = MySql::conectar()->prepare("UPDATE `tb_user` SET nome = ?, senha = ?, img = ? WHERE email = ?");
             return $sql->execute(array($nome, $senhaParaAtualizar, $imagem, $_SESSION['email']));
         } catch (PDOException $e) {
-            // Log do erro
             error_log("Erro ao atualizar usuário: " . $e->getMessage());
             return false;
         }
@@ -39,6 +38,7 @@ class Usuario {
                     $_SESSION['nome'] = $info['nome'];
                     $_SESSION['img'] = $info['img'];
                     $_SESSION['nivel'] = $info['nivel'];
+                    $_SESSION['user_id'] = $info['ID'];
                     return true;
                 } else {
                     error_log("Senha incorreta para o email: " . $email);
@@ -54,14 +54,13 @@ class Usuario {
         }
     }
     
-    public static function cadastrarUsuario($nome, $senha, $email) {
+    public static function cadastrarUsuario($nome, $senha, $email, $cargo) {
         try {
             if (self::userExists($email)) {
                 return false;
             }
 
             $imagem = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Placeholder_no_text.svg/1024px-Placeholder_no_text.svg.png';
-            $cargo = 'USUARIO';
 
             $sql = MySql::conectar()->prepare("INSERT INTO `tb_user` (nome, senha, img, email, cargo) VALUES (?, ?, ?, ?, ?)");
             return $sql->execute(array($nome, $senha, $imagem, $email, $cargo));
