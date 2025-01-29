@@ -31,6 +31,69 @@ body {
     align-items: center;
 }
 
+/* Estilo para a seção de perfil na sidebar */
+.sidebar .profile {
+    text-align: center;
+    padding: 15px;
+}
+
+.sidebar .profile img {
+    width: 120px; /* Ajuste o tamanho da imagem se necessário */
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: #666;
+    object-fit: cover;
+}
+
+.sidebar .profile h2 {
+    margin: 10px 0;
+    color: #fff; /* Cor do texto do nome */
+    font-size: 1.5rem;
+}
+
+.sidebar .profile h3 {
+    margin: 5px 0;
+    color: #ff5722; /* Cor para o cargo e nível */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sidebar .profile p {
+    margin: 5px 0;
+    color: #ffffff; /* Cor para o texto da quantidade de XP */
+    font-size: 1rem;
+}
+
+.sidebar .profile a.button {
+    display: block;
+    margin-top: 10px;
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .profile a.button:hover {
+    background-color: #ff1c2b;
+}
+
+.sidebar .profile a.button-admin {
+    background-color: #4caf50; /* Cor específica para o botão do painel */
+}
+
+.sidebar .profile a.button-admin:hover {
+    background-color: #388e3c;
+}
+
+
 .sidebar .profile {
     text-align: center;
     cursor: pointer;
@@ -352,7 +415,7 @@ body {
     justify-content: center;
 }
 
-.finalizar-compra a {
+.finalizar-compra input {
     text-decoration: none;
     background-color: #ff5722;
     color: #fff;
@@ -360,9 +423,11 @@ body {
     border-radius: 8px;
     font-size: 1.2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 0;
+    cursor: pointer;
 }
 
-.finalizar-compra a:hover {
+.finalizar-compra input:hover {
     background-color: #e64a19;
     transform: translateY(-2px);
 }
@@ -386,7 +451,7 @@ body {
 }
 
 .button-remove {
-    background-color: #e6222f;
+    background-color: #e6222f !important;
 }
 
 .success {
@@ -409,4 +474,108 @@ body {
     border-radius: 5px;
     text-align: center;
     margin-top: 7px;
+}
+
+/* PEDIDOS */
+.pedidos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.pedidos-container h2 {
+    margin-bottom: 5px;
+}
+
+.pedidos-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pedidos-table th, .pedidos-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.pedidos-table th {
+    background-color:  #e96e49;
+    color: white;
+    text-align: center;
+}
+
+.pedidos-container form {
+    display: flex;
+
+}
+
+.pedidos-table input,
+.pedidos-container select,
+.pedidos-table input:focus,
+.pedidos-container select:focus {
+    width: 100%;
+    padding: 5px 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.pedidos-table input {
+    background-color: #10a35f;
+    color: white;
+    border: 0;
+}
+
+.pedidos-container ul {
+    margin-left: 15px;
+
+}
+
+.perfil-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.perfil-container h2 {
+    text-align: center;
+}
+
+.perfil-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.perfil-container label {
+    font-weight: bold;
+}
+
+.perfil-container input[type="text"],
+.perfil-container input[type="password"],
+.perfil-container input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.perfil-container input[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.perfil-container input[type="submit"]:hover {
+    background-color: #0056b3;
 }

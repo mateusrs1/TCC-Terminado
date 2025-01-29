@@ -1,5 +1,24 @@
 <?php
 $carrinho = Carrinho::obterCarrinho();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['marmita_id'])) {
+        Carrinho::adicionarAoCarrinho($_POST['marmita_id']);
+        header('Location: carrinho');
+        exit();
+    } elseif (isset($_POST['remover_marmita_id'])) {
+        Carrinho::removerDoCarrinho($_POST['remover_marmita_id']);
+        header('Location: carrinho');
+        exit();
+    } elseif (isset($_POST['finalizar_compra'])) {
+        if (Pedido::fazerPedido()) {
+            header('Location: pedidos');
+            exit();
+        } else {
+            $erro = "Ocorreu um erro ao tentar finalizar a compra. Tente novamente.";
+        }
+    }
+}
 ?>
 
 <div class="carrinho-container">
@@ -17,10 +36,10 @@ $carrinho = Carrinho::obterCarrinho();
                         <div class="form-btn">
                             <form method="post" action="carrinho">
                                 <input type="hidden" name="remover_marmita_id" value="<?php echo $item['marmita_id']; ?>">
-                                <input type="submit" class="button-carrinho button-remove"  value="Remover">
+                                <input type="submit" class="button-carrinho button-remove" value="Remover">
                             </form>
                             <form method="post" action="carrinho">
-                                <input type="hidden" cla name="marmita_id" value="<?php echo $item['marmita_id']; ?>">
+                                <input type="hidden" name="marmita_id" value="<?php echo $item['marmita_id']; ?>">
                                 <input type="submit" class="button-carrinho button-add" value="Adicionar">
                             </form>
                         </div>
@@ -29,8 +48,14 @@ $carrinho = Carrinho::obterCarrinho();
             </ul>
         </div>
         <div class="finalizar-compra">
-            <a href="checkout">Finalizar Compra</a>
+            <form method="post" action="carrinho">
+                <input type="hidden" name="finalizar_compra" value="1">
+                <input type="submit" value="Finalizar Compra">
+            </form>
         </div>
+        <?php if (isset($erro)): ?>
+            <p class="erro"><?php echo $erro; ?></p>
+        <?php endif; ?>
     <?php else: ?>
         <p>Seu carrinho está vazio.</p>
     <?php endif; ?>

@@ -68,13 +68,3 @@ class Carrinho {
         }
     }
 }
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['marmita_id'])) {
-        Carrinho::adicionarAoCarrinho($_POST['marmita_id']);
-    } elseif (isset($_POST['remover_marmita_id'])) {
-        Carrinho::removerDoCarrinho($_POST['remover_marmita_id']);
-        header('Location: carrinho');
-        exit();
-    }
-}

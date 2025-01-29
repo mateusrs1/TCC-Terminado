@@ -4,6 +4,9 @@ if (!isset($_SESSION['cargo'])) {
     exit();
 }
 
+$email = $_SESSION['email'];
+$usuario = Usuario::obterUsuario($email);
+
 $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 ?>
 
@@ -24,6 +27,8 @@ $url = isset($_GET['url']) ? $_GET['url'] : 'home';
             <h2><?php echo $_SESSION['nome']; ?></h2>
             <h3><?php echo $_SESSION['cargo']; ?></h3>
             <h3>Nível <?php echo $_SESSION['nivel']; ?></h3>
+            <p>XP: <?php echo $_SESSION['xp']; ?></p>
+            <p>Faltam <?php echo $usuario['xp_para_proximo_nivel']; ?> XP para o próximo nível</p>
             <a href="<?php echo INCLUDE_PATH; ?>logout.php" class="button">Sair</a>
             <?php if ($_SESSION['cargo'] === 'ADMIN') { ?>
                 <span> | </span>

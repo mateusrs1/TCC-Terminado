@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $(document).ready(function(){
         $('form').on('submit', function(){
             $(this).find(':submit').prop('disabled', true);
-            $(this).submit();
         });
     });
 </script>
+
