@@ -31,8 +31,7 @@ $url = isset($_GET['url']) ? $_GET['url'] : 'home';
             <p>Faltam <?php echo $usuario['xp_para_proximo_nivel']; ?> XP para o próximo nível</p>
             <a href="<?php echo INCLUDE_PATH; ?>logout.php" class="button">Sair</a>
             <?php if ($_SESSION['cargo'] === 'ADMIN') { ?>
-                <span> | </span>
-                <a href="<?php echo INCLUDE_PATH; ?>painel" class="button">Painel</a>
+                <a href="<?php echo INCLUDE_PATH; ?>painel" style="background: #FF5722" class="button">Painel</a>
             <?php } ?>
         </a>
     </div>

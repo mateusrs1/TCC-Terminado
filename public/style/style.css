@@ -478,6 +478,7 @@ body {
 
 /* PEDIDOS */
 .pedidos-container {
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -578,4 +579,81 @@ body {
 
 .perfil-container input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+/* Estilo geral da tabela de usuários */
+.container-table {
+    overflow-y: scroll;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.container-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container-table th, .container-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.container-table th {
+    background-color: #e96e49;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-table td {
+    background-color: #fff;
+}
+
+.container-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.container-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.container-table button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container-table button:hover {
+    transform: translateY(-2px);
+}
+
+.container-table button[name="update_cargo"] {
+    background-color: #ff5722;
+    color: white;
+}
+
+.container-table button[name="update_cargo"]:hover {
+    background-color: #e64a19;
+}
+
+.container-table button[name="excluir_usuario"] {
+    background-color: #e6222f;
+    color: white;
+}
+
+.container-table button[name="excluir_usuario"]:hover {
+    background-color: #c61c1c;
 }

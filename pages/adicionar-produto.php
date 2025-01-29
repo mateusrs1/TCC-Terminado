@@ -6,9 +6,9 @@ if($_SESSION['cargo'] !== "ADMIN" && $_SESSION['cargo'] !== "COZINHEIRO") {
 ?>
 
 <div class="container">
-    <h2>Criar Nova Marmita</h2>
+    <h2>Criar Novo Produto</h2>
     <form method="post" enctype="multipart/form-data">
-        <label for="nome" class="title">Nome da Marmita:</label>
+        <label for="nome" class="title">Nome do Produto:</label>
         <input type="text" id="nome" name="nome" required>
 
         <label for="descricao" class="title">Descrição:</label>
@@ -17,10 +17,10 @@ if($_SESSION['cargo'] !== "ADMIN" && $_SESSION['cargo'] !== "COZINHEIRO") {
         <label for="preco" class="title">Preço (R$):</label>
         <input type="number" step="0.01" id="preco" name="preco" required>
 
-        <label for="imagem" class="title">Imagem da Marmita:</label>
+        <label for="imagem" class="title">Imagem do Produto:</label>
         <input type="file" id="imagem" name="imagem" accept="image/*" required>
 
-        <input type="submit" value="Criar Marmita" class="btn-submit">
+        <input type="submit" value="Criar produto" class="btn-submit">
     </form>
 
     <?php
@@ -30,11 +30,11 @@ if($_SESSION['cargo'] !== "ADMIN" && $_SESSION['cargo'] !== "COZINHEIRO") {
         $preco = $_POST['preco'];
         $imagem = $_FILES['imagem'];
 
-        $marmita = new Marmitas();
-        if ($marmita->criarMarmita($nome, $descricao, $preco, $imagem)) {
-            echo '<p class="success">Marmita criada com sucesso!</p>';
+        $produto = new Produtos();
+        if ($produto->criarProduto($nome, $descricao, $preco, $imagem)) {
+            echo '<p class="success">Produto criado com sucesso!</p>';
         } else {
-            echo '<p class="error">Erro ao criar marmita.</p>';
+            echo '<p class="error">Erro ao criar produto.</p>';
         }
     }
     ?>

@@ -35,3 +35,171 @@ Stack trace:
 #0 C:\xampp\htdocs\TCC-2.0\index.php(15): include()
 #1 {main}
   thrown in C:\xampp\htdocs\TCC-2.0\pages\perfil.php on line 4
+[11-Sep-2024 17:21:11 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\xampp\htdocs\TCC-2.0\classes\Usuario.php:40
+Stack trace:
+#0 D:\xampp\htdocs\TCC-2.0\pages\login.php(37): Usuario::loginUsuario('conradtsamuel@g...', '1234567')
+#1 D:\xampp\htdocs\TCC-2.0\index.php(15): include('D:\\xampp\\htdocs...')
+#2 {main}
+  thrown in D:\xampp\htdocs\TCC-2.0\classes\Usuario.php on line 40
+[11-Sep-2024 18:17:23 America/Sao_Paulo] PHP Warning:  include(classes/Produtos.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TCC-2.0\config.php on line 12
+[11-Sep-2024 18:17:23 America/Sao_Paulo] PHP Warning:  include(): Failed opening 'classes/Produtos.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TCC-2.0\config.php on line 12
+[11-Sep-2024 18:17:23 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Class "Produtos" not found in C:\xampp\htdocs\TCC-2.0\pages\index.php:2
+Stack trace:
+#0 C:\xampp\htdocs\TCC-2.0\index.php(15): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\TCC-2.0\pages\index.php on line 2
+[11-Sep-2024 18:17:46 America/Sao_Paulo] Erro ao obter o carrinho: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nutribox.tb_marmitas' doesn't exist
+[11-Sep-2024 18:17:50 America/Sao_Paulo] Erro ao obter o carrinho: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nutribox.tb_marmitas' doesn't exist
+[11-Sep-2024 18:18:20 America/Sao_Paulo] Erro ao obter o carrinho: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.produto_id' in 'on clause'
+[11-Sep-2024 18:18:23 America/Sao_Paulo] Erro ao adicionar item ao carrinho: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'produto_id' in 'where clause'
+[11-Sep-2024 18:18:25 America/Sao_Paulo] Erro ao obter o carrinho: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.produto_id' in 'on clause'
+[11-Sep-2024 18:20:11 America/Sao_Paulo] PHP Warning:  Undefined array key "marmita_id" in C:\xampp\htdocs\TCC-2.0\pages\carrinho.php on line 39
+[11-Sep-2024 18:20:11 America/Sao_Paulo] PHP Warning:  Undefined array key "marmita_id" in C:\xampp\htdocs\TCC-2.0\pages\carrinho.php on line 43
+[11-Sep-2024 18:20:29 America/Sao_Paulo] PHP Warning:  Undefined array key "marmita_id" in C:\xampp\htdocs\TCC-2.0\classes\Pedido.php on line 33
+[11-Sep-2024 18:20:29 America/Sao_Paulo] Erro ao fazer pedido: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'marmita_id' cannot be null
+[11-Sep-2024 18:20:55 America/Sao_Paulo] Erro ao fazer pedido: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'produto_id' in 'field list'
+[11-Sep-2024 18:20:57 America/Sao_Paulo] Erro ao fazer pedido: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'produto_id' in 'field list'
+[11-Sep-2024 18:21:00 America/Sao_Paulo] Erro ao fazer pedido: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'produto_id' in 'field list'
+[12-Sep-2024 22:06:54 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[12-Sep-2024 22:06:57 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[12-Sep-2024 22:07:00 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[12-Sep-2024 22:07:02 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[14-Sep-2024 16:05:36 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[14-Sep-2024 16:06:49 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[14-Sep-2024 16:07:57 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "else" in C:\xampp\htdocs\TCC-2.0\pages\index.php on line 63
+[14-Sep-2024 16:08:14 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "if", expecting "(" in C:\xampp\htdocs\TCC-2.0\pages\index.php on line 50
+[14-Sep-2024 16:08:24 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[14-Sep-2024 16:08:30 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[14-Sep-2024 16:10:36 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[14-Sep-2024 16:10:38 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[14-Sep-2024 16:10:51 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[14-Sep-2024 16:12:50 America/Sao_Paulo] Erro ao deletar produto: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`nutribox`.`tb_pedido_itens`, CONSTRAINT `tb_pedido_itens_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`))
+[14-Sep-2024 16:26:13 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 48
+[14-Sep-2024 16:26:13 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:26:13 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 48
+[14-Sep-2024 16:26:13 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 48
+[14-Sep-2024 16:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 48
+[14-Sep-2024 16:26:52 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:26:56 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 48
+[14-Sep-2024 16:26:56 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:26:56 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 48
+[14-Sep-2024 16:26:56 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:29:08 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Usuario::obterUsuario() in C:\xampp\htdocs\TCC-2.0\components\sidebar.php:8
+Stack trace:
+#0 C:\xampp\htdocs\TCC-2.0\index.php(13): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\TCC-2.0\components\sidebar.php on line 8
+[14-Sep-2024 16:29:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Usuario::obterUsuario() in C:\xampp\htdocs\TCC-2.0\components\sidebar.php:8
+Stack trace:
+#0 C:\xampp\htdocs\TCC-2.0\index.php(13): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\TCC-2.0\components\sidebar.php on line 8
+[14-Sep-2024 16:29:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Usuario::obterUsuario() in C:\xampp\htdocs\TCC-2.0\components\sidebar.php:8
+Stack trace:
+#0 C:\xampp\htdocs\TCC-2.0\index.php(13): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\TCC-2.0\components\sidebar.php on line 8
+[14-Sep-2024 16:29:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Usuario::obterUsuario() in C:\xampp\htdocs\TCC-2.0\components\sidebar.php:8
+Stack trace:
+#0 C:\xampp\htdocs\TCC-2.0\index.php(13): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\TCC-2.0\components\sidebar.php on line 8
+[14-Sep-2024 16:29:30 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method Usuario::obterUsuario() in C:\xampp\htdocs\TCC-2.0\components\sidebar.php:8
+Stack trace:
+#0 C:\xampp\htdocs\TCC-2.0\index.php(13): include()
+#1 {main}
+  thrown in C:\xampp\htdocs\TCC-2.0\components\sidebar.php on line 8
+[14-Sep-2024 16:31:48 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:31:48 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:31:48 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:31:48 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:32:23 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:32:23 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:32:23 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:32:23 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:32:25 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:32:25 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:32:25 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:32:25 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:32:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:32:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:32:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:32:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:32:37 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:32:37 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:32:37 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 54
+[14-Sep-2024 16:32:37 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 62
+[14-Sep-2024 16:34:36 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 66
+[14-Sep-2024 16:34:36 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:34:36 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 66
+[14-Sep-2024 16:34:36 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 66
+[14-Sep-2024 16:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 66
+[14-Sep-2024 16:34:58 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:35:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 66
+[14-Sep-2024 16:35:26 America/Sao_Paulo] PHP Warning:  Undefined variable $usuari in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:35:26 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:35:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 66
+[14-Sep-2024 16:35:26 America/Sao_Paulo] PHP Warning:  Undefined variable $usuari in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:35:26 America/Sao_Paulo] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:35:36 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 66
+[14-Sep-2024 16:35:36 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:35:36 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 66
+[14-Sep-2024 16:35:36 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 74
+[14-Sep-2024 16:37:06 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "if" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 13
+[14-Sep-2024 16:37:15 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 68
+[14-Sep-2024 16:37:15 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 76
+[14-Sep-2024 16:37:15 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 68
+[14-Sep-2024 16:37:15 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 76
+[14-Sep-2024 16:37:46 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected token "if", expecting "," or ";" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 14
+[14-Sep-2024 16:37:51 America/Sao_Paulo] PHP Warning:  Array to string conversion in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 11
+[14-Sep-2024 16:37:51 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 69
+[14-Sep-2024 16:37:51 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 77
+[14-Sep-2024 16:37:51 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 69
+[14-Sep-2024 16:37:51 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 77
+[14-Sep-2024 16:38:13 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 67
+[14-Sep-2024 16:38:13 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 75
+[14-Sep-2024 16:38:13 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 67
+[14-Sep-2024 16:38:13 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 75
+[14-Sep-2024 16:38:46 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 70
+[14-Sep-2024 16:38:46 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 78
+[14-Sep-2024 16:38:46 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 70
+[14-Sep-2024 16:38:46 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 78
+[14-Sep-2024 16:39:01 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 71
+[14-Sep-2024 16:39:01 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 79
+[14-Sep-2024 16:39:01 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 71
+[14-Sep-2024 16:39:01 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 79
+[14-Sep-2024 16:39:09 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 72
+[14-Sep-2024 16:39:09 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 80
+[14-Sep-2024 16:39:09 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 72
+[14-Sep-2024 16:39:09 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 80
+[14-Sep-2024 16:40:05 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 61
+[14-Sep-2024 16:40:05 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 70
+[14-Sep-2024 16:40:05 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 78
+[14-Sep-2024 16:40:05 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 61
+[14-Sep-2024 16:40:05 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 70
+[14-Sep-2024 16:40:05 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 78
+[14-Sep-2024 16:42:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:42:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 63
+[14-Sep-2024 16:42:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 71
+[14-Sep-2024 16:42:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:42:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 63
+[14-Sep-2024 16:42:26 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 71
+[14-Sep-2024 16:42:28 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:42:28 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 63
+[14-Sep-2024 16:42:28 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 71
+[14-Sep-2024 16:42:28 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 57
+[14-Sep-2024 16:42:28 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 63
+[14-Sep-2024 16:42:28 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 71
+[14-Sep-2024 16:45:14 America/Sao_Paulo] PHP Warning:  Undefined variable $role in C:\xampp\htdocs\TCC-2.0\pages\cadastro.php on line 36
+[14-Sep-2024 16:45:14 America/Sao_Paulo] Erro ao cadastrar usuário: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'senha' in 'field list'
+[14-Sep-2024 16:46:19 America/Sao_Paulo] Erro ao cadastrar usuário: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'senha' in 'field list'
+[14-Sep-2024 16:46:39 America/Sao_Paulo] Erro ao cadastrar usuário: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'senha' in 'field list'
+[14-Sep-2024 16:48:22 America/Sao_Paulo] Senha incorreta para o email: conradtsamuel@gmail.com
+[14-Sep-2024 16:48:41 America/Sao_Paulo] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TCC-2.0\classes\Usuario.php on line 53
+[14-Sep-2024 16:49:32 America/Sao_Paulo] PHP Warning:  Undefined array key "novo_cargo" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 14
+[14-Sep-2024 16:49:37 America/Sao_Paulo] PHP Warning:  Undefined array key "novo_cargo" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 14
+[14-Sep-2024 16:50:05 America/Sao_Paulo] PHP Warning:  Undefined array key "novo_cargo" in C:\xampp\htdocs\TCC-2.0\pages\painel.php on line 14

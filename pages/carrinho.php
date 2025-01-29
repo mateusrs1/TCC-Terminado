@@ -1,13 +1,14 @@
 <?php
 $carrinho = Carrinho::obterCarrinho();
+$totalCarrinho = 0; // Variável para armazenar o total
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['marmita_id'])) {
-        Carrinho::adicionarAoCarrinho($_POST['marmita_id']);
+    if (isset($_POST['produto_id'])) {
+        Carrinho::adicionarAoCarrinho($_POST['produto_id']);
         header('Location: carrinho');
         exit();
-    } elseif (isset($_POST['remover_marmita_id'])) {
-        Carrinho::removerDoCarrinho($_POST['remover_marmita_id']);
+    } elseif (isset($_POST['remover_produto_id'])) {
+        Carrinho::removerDoCarrinho($_POST['remover_produto_id']);
         header('Location: carrinho');
         exit();
     } elseif (isset($_POST['finalizar_compra'])) {
@@ -35,16 +36,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <span class="carrinho-item-quantity">Quantidade: <?php echo $item['quantidade']; ?></span>
                         <div class="form-btn">
                             <form method="post" action="carrinho">
-                                <input type="hidden" name="remover_marmita_id" value="<?php echo $item['marmita_id']; ?>">
+                                <input type="hidden" name="remover_produto_id" value="<?php echo $item['produto_id']; ?>">
                                 <input type="submit" class="button-carrinho button-remove" value="Remover">
                             </form>
                             <form method="post" action="carrinho">
-                                <input type="hidden" name="marmita_id" value="<?php echo $item['marmita_id']; ?>">
+                                <input type="hidden" name="produto_id" value="<?php echo $item['produto_id']; ?>">
                                 <input type="submit" class="button-carrinho button-add" value="Adicionar">
                             </form>
                         </div>
                     </li>
+                    <?php 
+                        // Acumula o valor total (preço * quantidade)
+                        $totalCarrinho += $item['preco'] * $item['quantidade'];
+                    ?>
                 <?php endforeach; ?>
+                <li>
+                    <span class="carrinho-item-name">Total: </span>
+                    <span class="carrinho-item-price">R$ <?php echo number_format($totalCarrinho, 2, ',', '.'); ?></span>
+                </li>
+                <li>
+                    <?php 
+                        $xpGanho = $totalCarrinho * 0.30;
+                    ?>
+                    <span class="carrinho-item-name">XP Ganhado: </span>
+                    <span class="carrinho-item-price"><?php echo number_format($xpGanho, 2, ',', '.'); ?> XP</span>
+                </li>
             </ul>
         </div>
         <div class="finalizar-compra">

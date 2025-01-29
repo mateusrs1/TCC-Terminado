@@ -1,29 +1,38 @@
 <?php
-$marmitas = Marmitas::obterMarmitas();
+$produtos = Produtos::obterProdutos();
 $mensagem = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['marmita_id'])) {
-        foreach ($marmitas as $marmita) {
-            if ($marmita['id'] == $_POST['marmita_id']) {
-                $nomeMarmita = $marmita['nome'];
+    // Verifica se o ID do produto foi passado corretamente
+    var_dump($_POST); // Verifica o conteúdo do POST para depuração
+
+    if (isset($_POST['produto_id'])) {
+        // Adicionar ao carrinho
+        foreach ($produtos as $produto) {
+            if ($produto['id'] == $_POST['produto_id']) {
+                $nomeproduto = $produto['nome'];
                 break;
             }
         }
-        Carrinho::adicionarAoCarrinho($_POST['marmita_id']);
-        $mensagem = $nomeMarmita . ' adicionado com sucesso ao carrinho!';
-    } elseif (isset($_POST['remove_marmita_id'])) {
+        Carrinho::adicionarAoCarrinho($_POST['produto_id']);
+        $mensagem = $nomeproduto . ' adicionado com sucesso ao carrinho!';
+    } elseif (isset($_POST['remove_produto_id'])) {
+        // Excluir produto
         if ($_SESSION['cargo'] == 'ADMIN' || $_SESSION['cargo'] == 'COZINHEIRO') {
-            foreach ($marmitas as $marmita) {
-                if ($marmita['id'] == $_POST['remove_marmita_id']) {
-                    $nomeMarmita = $marmita['nome'];
+            foreach ($produtos as $produto) {
+                if ($produto['id'] == $_POST['remove_produto_id']) {
+                    $nomeproduto = $produto['nome'];
                     break;
                 }
             }
-            Marmitas::deletarMarmita($_POST['remove_marmita_id']);
-            $mensagem = $nomeMarmita . ' excluída com sucesso!';
+            $resultado = Produtos::deletarProduto($_POST['remove_produto_id']);
+            if ($resultado) {
+                $mensagem = $nomeproduto . ' excluído com sucesso!';
+            } else {
+                $mensagem = 'Erro ao excluir o produto.';
+            }
         } else {
-            $mensagem = 'Você não tem permissão para excluir marmitas.';
+            $mensagem = 'Você não tem permissão para excluir produtos.';
         }
     }
 }
@@ -33,44 +42,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="header">
         <h2 class="titulo">Bem-vindo ao Cardápio</h2>
         <?php if ($_SESSION['cargo'] == 'ADMIN' || $_SESSION['cargo'] == 'COZINHEIRO') { ?>
-            <a href="adicionar-marmita">Adicionar Marmita</a>
+            <a href="adicionar-produto">Adicionar Produto</a>
         <?php } ?>
     </div>
     <div class="card-flex">
-        <?php if ($marmitas) {
-            foreach ($marmitas as $marmita) { ?>
+        <?php if ($produtos) {
+            foreach ($produtos as $produto) { ?>
                 <div class="card">
-                    <img class="imgcardapio" src="<?php echo INCLUDE_PATH . 'uploads/' . $marmita['imagem']; ?>" alt="<?php echo $marmita['nome']; ?>">
+                    <img class="imgcardapio" src="<?php echo INCLUDE_PATH . 'uploads/' . $produto['imagem']; ?>" alt="<?php echo $produto['nome']; ?>">
                     <div class="textcard">
-                        <h1><?php echo $marmita['nome']; ?></h1>
-                        <p id="desc"><?php echo $marmita['descricao']; ?></p>
-                        <p style="margin-top: 12px; color: green; font-weight: bold;">R$ <?php echo number_format($marmita['preco'], 2, ',', '.'); ?></p>
+                        <h1><?php echo $produto['nome']; ?></h1>
+                        <p id="desc"><?php echo $produto['descricao']; ?></p>
+                        <p style="margin-top: 12px; color: green; font-weight: bold;">R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></p>
                     </div>
                     <div class="button-flex">
-                        <?php if ($_SESSION['cargo'] == 'COZINHEIRO') { ?>
+                        <?php if ($_SESSION['cargo'] == 'ADMIN' || $_SESSION['cargo'] == 'COZINHEIRO')  { ?>
                             <form method="post">
-                                <input type="hidden" name="remove_marmita_id" value="<?php echo $marmita['id']; ?>">
+                                <input type="hidden" name="remove_produto_id" value="<?php echo $produto['id']; ?>">
                                 <input style="background-color: #e6222f !important;" type="submit" class="buttoncard" value="EXCLUIR" name="EXCLUIR">
                             </form>
                         <?php } ?> 
                         <form method="post">
-                            <input type="hidden" name="marmita_id" value="<?php echo $marmita['id']; ?>">
+                            <input type="hidden" name="produto_id" value="<?php echo $produto['id']; ?>">
                             <input type="submit" class="buttoncard" value="PEDIR" name="PEDIR">
                         </form>
                     </div>
                 </div>
             <?php }
         } else {
-            echo '<p>Nenhuma marmita encontrada.</p>';
+            echo '<p>Nenhum produto encontrado.</p>';
         } ?>
     </div>
 </div>
 
 <?php if ($mensagem != ''): ?>
     <script>
-        window.location.href = "<?php echo INCLUDE_PATH; ?>";
         alert("<?php echo $mensagem; ?>");
-        
+        window.location.href = "<?php echo INCLUDE_PATH; ?>";
     </script>
 <?php endif; ?>
 
@@ -81,4 +89,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         });
     });
 </script>
-

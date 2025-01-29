@@ -33,8 +33,8 @@ if ($_SESSION['cargo'] === 'ADMIN' || $_SESSION['cargo'] === 'COZINHEIRO') {
                         <th>Usuário</th>
                         <th>Status</th>
                         <th>Itens</th>
+                        <th>Data de Criação</th> <!-- Nova coluna para data de criação -->
                         <th>Atualizar Status</th>
-                        <th>Excluir</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,6 +55,7 @@ if ($_SESSION['cargo'] === 'ADMIN' || $_SESSION['cargo'] === 'COZINHEIRO') {
                                     <?php endforeach; ?>
                                 </ul>
                             </td>
+                            <td><?php echo date('d/m/Y H:i', strtotime($pedido['data_criacao'])); ?></td> <!-- Exibe a data de criação -->
                             <td>
                                 <form method="post" style="display:inline;">
                                     <input type="hidden" name="pedido_id" value="<?php echo $pedido['id']; ?>">
@@ -64,12 +65,6 @@ if ($_SESSION['cargo'] === 'ADMIN' || $_SESSION['cargo'] === 'COZINHEIRO') {
                                         <option value="ENTREGUE" <?php echo $pedido['status'] == 'ENTREGUE' ? 'selected' : ''; ?>>Entregue</option>
                                     </select>
                                     <input type="submit" value="Atualizar Status">
-                                </form>
-                            </td>
-                            <td>
-                                <form method="post" style="display:inline;">
-                                    <input type="hidden" name="excluir_pedido_id" value="<?php echo $pedido['id']; ?>">
-                                    <input type="submit" value="Excluir" class="button-remove" onclick="return confirm('Tem certeza que deseja excluir este pedido?');">
                                 </form>
                             </td>
                         </tr>
@@ -100,7 +95,7 @@ if ($_SESSION['cargo'] === 'ADMIN' || $_SESSION['cargo'] === 'COZINHEIRO') {
                     <?php foreach ($meusPedidos as $pedido): ?>
                         <tr>
                             <td><?php echo $pedido['id']; ?></td>
-                            <td><?php echo date('d/m/Y H:i', strtotime($pedido['data_criacao'])); ?></td>
+                            <td><?php echo date('d/m/Y H:i', strtotime($pedido['data_criacao'])); ?></td> <!-- Exibe a data de criação para usuário comum -->
                             <td><?php echo $pedido['status']; ?></td>
                             <td>
                                 <ul>

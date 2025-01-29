@@ -29,8 +29,8 @@ class Pedido {
             
             // Inserimos os itens do carrinho no pedido
             foreach ($carrinho as $item) {
-                $sql = $pdo->prepare("INSERT INTO `tb_pedido_itens` (`pedido_id`, `marmita_id`, `quantidade`, `preco`) VALUES (?, ?, ?, ?)");
-                $sql->execute(array($pedido_id, $item['marmita_id'], $item['quantidade'], $item['preco']));
+                $sql = $pdo->prepare("INSERT INTO `tb_pedido_itens` (`pedido_id`, `produto_id`, `quantidade`, `preco`) VALUES (?, ?, ?, ?)");
+                $sql->execute(array($pedido_id, $item['produto_id'], $item['quantidade'], $item['preco']));
             }
 
             // Limpa o carrinho após o pedido ser feito
@@ -54,11 +54,14 @@ class Pedido {
         
         try {
             $pdo = MySql::conectar();
-
-            $sql = $pdo->prepare("SELECT p.*, pi.marmita_id, pi.quantidade, pi.preco, m.nome FROM `tb_pedidos` p 
+    
+            // Ordenar por status e depois por data de criação
+            $sql = $pdo->prepare("SELECT p.*, pi.produto_id, pi.quantidade, pi.preco, m.nome 
+                                  FROM `tb_pedidos` p 
                                   JOIN `tb_pedido_itens` pi ON p.id = pi.pedido_id 
-                                  JOIN `tb_marmitas` m ON pi.marmita_id = m.id 
-                                  WHERE p.`usuario_id` = ? ORDER BY p.`data_criacao` DESC");
+                                  JOIN `tb_produtos` m ON pi.produto_id = m.id 
+                                  WHERE p.`usuario_id` = ? 
+                                  ORDER BY p.`status` ASC, p.`data_criacao` DESC");
             $sql->execute(array($_SESSION['user_id']));
             
             return $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -67,6 +70,7 @@ class Pedido {
             return [];
         }
     }
+    
 
     // Método para obter todos os pedidos (para ADMIN e COZINHEIRO)
     public static function obterTodosPedidos() {
@@ -74,11 +78,12 @@ class Pedido {
         
         try {
             $pdo = MySql::conectar();
-
-            $sql = $pdo->prepare("SELECT p.*, pi.marmita_id, pi.quantidade, pi.preco, m.nome, u.nome AS usuario_nome 
+    
+            // Ordenar por status e depois por data de criação
+            $sql = $pdo->prepare("SELECT p.*, pi.produto_id, pi.quantidade, pi.preco, m.nome, u.nome AS usuario_nome 
                                   FROM `tb_pedidos` p 
                                   JOIN `tb_pedido_itens` pi ON p.id = pi.pedido_id 
-                                  JOIN `tb_marmitas` m ON pi.marmita_id = m.id 
+                                  JOIN `tb_produtos` m ON pi.produto_id = m.id 
                                   JOIN `tb_user` u ON p.usuario_id = u.id 
                                   ORDER BY p.`data_criacao` DESC");
             $sql->execute();
@@ -89,6 +94,7 @@ class Pedido {
             return [];
         }
     }
+    
 
     // Método para obter itens dos pedidos
     public static function obterItensPedidos() {
@@ -98,7 +104,7 @@ class Pedido {
             $pdo = MySql::conectar();
             
             // Obtém todos os itens dos pedidos
-            $sql = $pdo->prepare("SELECT pi.pedido_id, m.nome, pi.quantidade FROM `tb_pedido_itens` pi JOIN `tb_marmitas` m ON pi.marmita_id = m.id");
+            $sql = $pdo->prepare("SELECT pi.pedido_id, m.nome, pi.quantidade FROM `tb_pedido_itens` pi JOIN `tb_produtos` m ON pi.produto_id = m.id");
             $sql->execute();
             
             return $sql->fetchAll(PDO::FETCH_ASSOC);

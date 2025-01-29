@@ -1,63 +1,63 @@
 <?php
 
-class Marmitas {
+class Produtos {
     
-    public function criarMarmita($nome, $descricao, $preco, $imagem) {
+    public function criarProduto($nome, $descricao, $preco, $imagem) {
         try {
-            $imagemNome = self::uploadImagem($imagem); // Chama a função estática
+            $imagemNome = self::uploadImagem($imagem);
 
             if ($imagemNome) {
-                $sql = MySql::conectar()->prepare("INSERT INTO `tb_marmitas` (nome, descricao, preco, imagem) VALUES (?, ?, ?, ?)");
+                $sql = MySql::conectar()->prepare("INSERT INTO `tb_produtos` (nome, descricao, preco, imagem) VALUES (?, ?, ?, ?)");
                 return $sql->execute(array($nome, $descricao, $preco, $imagemNome));
             } else {
                 error_log("Erro ao fazer upload da imagem.");
                 return false;
             }
         } catch (PDOException $e) {
-            error_log("Erro ao criar marmita: " . $e->getMessage());
+            error_log("Erro ao criar produto: " . $e->getMessage());
             return false;
         }
     }
 
-    public static function obterMarmitas() {
+    public static function obterProdutos() {
         try {
-            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_marmitas`");
+            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_produtos`");
             $sql->execute();
             return $sql->fetchAll();
         } catch (PDOException $e) {
-            error_log("Erro ao obter marmitas: " . $e->getMessage());
+            error_log("Erro ao obter produtos: " . $e->getMessage());
             return false;
         }
     }
 
-    public static function deletarMarmita($id) {
+    public static function deletarProduto($id) {
         try {
-            $sql = MySql::conectar()->prepare("DELETE FROM `tb_marmitas` WHERE id = ?");
+            $sql = MySql::conectar()->prepare("DELETE FROM `tb_produtos` WHERE id = ?");
             return $sql->execute(array($id));
         } catch (PDOException $e) {
-            error_log("Erro ao deletar marmita: " . $e->getMessage());
+            error_log("Erro ao deletar produto: " . $e->getMessage());
             return false;
         }
     }
 
-    public static function atualizarMarmita($id, $nome, $descricao, $preco, $imagem = null) {
+    public static function atualizarProduto($id, $nome, $descricao, $preco, $imagem = null) {
         try {
             if ($imagem) {
-                $imagemNome = self::uploadImagem($imagem); // Chama a função estática
+                $imagemNome = self::uploadImagem($imagem);
 
                 if (!$imagemNome) {
                     error_log("Erro ao fazer upload da imagem.");
                     return false;
                 }
 
-                $sql = MySql::conectar()->prepare("UPDATE `tb_marmitas` SET nome = ?, descricao = ?, preco = ?, imagem = ? WHERE id = ?");
+                $sql = MySql::conectar()->prepare("UPDATE `tb_produtos` SET nome = ?, descricao = ?, preco = ?, imagem = ? WHERE id = ?");
                 return $sql->execute(array($nome, $descricao, $preco, $imagemNome, $id));
             } else {
-                $sql = MySql::conectar()->prepare("UPDATE `tb_marmitas` SET nome = ?, descricao = ?, preco = ? WHERE id = ?");
+                $sql = MySql::conectar()->prepare("UPDATE `tb_produtos` SET nome = ?, descricao = ?, preco = ? WHERE id = ?");
                 return $sql->execute(array($nome, $descricao, $preco, $id));
             }
         } catch (PDOException $e) {
-            error_log("Erro ao atualizar marmita: " . $e->getMessage());
+            error_log("Erro ao atualizar produto: " . $e->getMessage());
             return false;
         }
     }
