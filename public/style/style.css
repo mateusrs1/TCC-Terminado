@@ -1,0 +1,129 @@
+
+
+body {
+    font-family: Arial, sans-serif; /* Define a família de fontes para o corpo do documento */
+    margin: 0; /* Remove margens padrão do corpo do documento */
+    display: flex; /* Usa o modelo de layout flexível para o corpo do documento */
+    height: 100vh; /* Faz com que o corpo ocupe 100% da altura da viewport */
+    background-color: #f2f2f2; /* Define a cor de fundo para todo o corpo do documento */
+}
+
+.titulo{
+    font-size:10%; /* Define o tamanho da fonte para elementos com a classe 'titulo' */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Define a família de fontes para elementos com a classe 'titulo' */
+}
+
+.sidebar { /* Estilos para a barra lateral */
+    width: 300px; /* Largura da barra lateral */
+    background-color: #ffc107; /* Cor de fundo da barra lateral */
+    padding: 20px; /* Espaçamento interno da barra lateral */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra à direita da barra lateral */
+    height: 100%; /* Faz com que a barra lateral ocupe 100% da altura disponível */
+}
+
+.sidebar .logo { /* Estilos para o elemento com a classe 'logo' dentro da barra lateral */
+    width: 250px; /* Largura da logo dentro da barra lateral */
+    background-color: #ffc107; /* Cor de fundo da logo */
+    padding-left: 20px; /* Espaçamento interno à esquerda da logo */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra à direita da logo */
+}
+
+.sidebar .titulo {
+    color: #fff; /* Cor do texto para elementos com a classe 'titulo' dentro da barra lateral */
+    font-size: 1.5em; /* Tamanho da fonte para elementos com a classe 'titulo' dentro da barra lateral */
+    margin-bottom: 20px; /* Margem inferior para elementos com a classe 'titulo' dentro da barra lateral */
+    text-align: center; /* Alinhamento central do texto para elementos com a classe 'titulo' dentro da barra lateral */
+}
+
+.sidebar nav ul {
+    list-style: none; /* Remove os estilos padrão de lista (pontos) para listas dentro da barra lateral */
+    padding: 0; /* Remove o preenchimento padrão para listas dentro da barra lateral */
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px; /* Margem inferior para itens de lista dentro da barra lateral */
+}
+
+.sidebar nav ul li a {
+    color: #fff; /* Cor do texto para links dentro da barra lateral */
+    text-decoration: none; /* Remove o sublinhado dos links dentro da barra lateral */
+    font-size: 1.2em; /* Tamanho da fonte para links dentro da barra lateral */
+    display: block; /* Faz com que os links dentro da barra lateral sejam exibidos como blocos */
+    padding: 10px; /* Espaçamento interno dos links dentro da barra lateral */
+    border-radius: 4px; /* Arredonda os cantos dos links dentro da barra lateral */
+    background-color: #ff5722; /* Cor de fundo dos links dentro da barra lateral */
+    text-align: center; /* Alinha o texto dos links ao centro dentro da barra lateral */
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #e64a19; /* Cor de fundo dos links ao passar o mouse dentro da barra lateral */
+}
+
+.main-content {
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço restante disponível */
+    padding: 20px; /* Espaçamento interno do conteúdo principal */
+    background-color: #fff; /* Cor de fundo do conteúdo principal */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra à esquerda do conteúdo principal */
+    height: 100%; /* Faz com que o conteúdo principal ocupe 100% da altura disponível */
+}
+
+.main-content h2 {
+    font-size: 2em; /* Tamanho da fonte para elementos h2 dentro do conteúdo principal */
+    margin-top: 0; /* Remove a margem superior padrão para elementos h2 dentro do conteúdo principal */
+    color: #333; /* Cor do texto para elementos h2 dentro do conteúdo principal */
+}
+
+.main-content p {
+    font-size: 1.2em; /* Tamanho da fonte para parágrafos dentro do conteúdo principal */
+    color: #666; /* Cor do texto para parágrafos dentro do conteúdo principal */
+}
+
+.card {
+    background-color: #a0a0a0; /* Cor de fundo dos cards */
+    padding: 15px; /* Espaçamento interno dos cards */
+    margin: 10px; /* Margem externa dos cards */
+    margin-top: 20px; /* Margem superior dos cards */
+    border-radius: 5px; /* Arredonda os cantos dos cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra dos cards */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transições suaves ao passar o mouse sobre os cards */
+    width: 300px; /* Largura fixa dos cards */
+    text-align: center; /* Centraliza o conteúdo dos cards */
+}
+
+.card:hover {
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse sobre os cards */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse sobre os cards */
+}
+
+.imgcardapio {
+    width: 100%; /* Faz com que a imagem dos cards ocupe 100% da largura */
+    height: auto; /* Mantém a proporção da altura da imagem dos cards */
+    border-radius: 5px; /* Arredonda os cantos da imagem dos cards */
+    display: block; /* Faz com que a imagem dos cards seja exibida como bloco */
+}
+
+.buttoncard {
+    margin-top: 20px; /* Espaçamento superior do botão */
+    padding: 10px 50px; /* Espaçamento interno do botão */
+    background-color: #ff5722; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 3px; /* Arredonda os cantos do botão */
+    font-size: 20px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transições suaves ao passar o mouse sobre o botão */
+}
+
+.buttoncard:hover {
+    background-color: #e64a19; /* Cor de fundo do botão ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse sobre o botão */
+}
+
+.textcard {
+    margin: 15px; /* Margem ao redor do texto dos cards */
+    margin-bottom: -10px; /* Margem inferior ajustada para alinhamento do texto nos cards */
+}
+
+
+
+/*eu te odeio gordao, Yuri Mateus Franco especificadamente esse troxa, odeio muito mesmo*/

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriBox</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>/public/style/style.css">
 </head>
 <body>
 <div class="sidebar">
-    <img class="logo" src="<?php echo INCLUDE_PATH; ?>/sources/logos/Nutribox.png" alt="Nutribox">
+    <img class="logo" src="<?php echo INCLUDE_PATH; ?>/public/logos/Nutribox.png" alt="Nutribox">
     <nav>
         <ul>
             <li><a href="cadastro">Tela de Cadastro</a></li>
