@@ -19,16 +19,36 @@ class Produtos {
         }
     }
 
-    public static function obterProdutos() {
+    public static function obterProdutos($filtros = []) {
         try {
-            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_produtos`");
-            $sql->execute();
+            $query = "SELECT * FROM `tb_produtos` WHERE 1=1";
+            $params = [];
+    
+            if (!empty($filtros['nome'])) {
+                $query .= " AND nome LIKE ?";
+                $params[] = '%' . $filtros['nome'] . '%';
+            }
+    
+            if (!empty($filtros['preco_min'])) {
+                $query .= " AND preco >= ?";
+                $params[] = $filtros['preco_min'];
+            }
+    
+            if (!empty($filtros['preco_max'])) {
+                $query .= " AND preco <= ?";
+                $params[] = $filtros['preco_max'];
+            }
+    
+            $sql = MySql::conectar()->prepare($query);
+            $sql->execute($params);
+    
             return $sql->fetchAll();
         } catch (PDOException $e) {
             error_log("Erro ao obter produtos: " . $e->getMessage());
             return false;
         }
     }
+    
 
     public static function deletarProduto($id) {
         try {

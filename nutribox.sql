@@ -138,7 +138,7 @@ INSERT INTO `tb_produtos` (`id`, `descricao`, `preco`, `nome`, `imagem`) VALUES
 --
 
 CREATE TABLE `tb_user` (
-  `ID` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nome` varchar(254) NOT NULL DEFAULT 'admin',
   `img` text DEFAULT NULL,
   `cargo` varchar(12) NOT NULL DEFAULT 'ADMIN',
@@ -152,7 +152,7 @@ CREATE TABLE `tb_user` (
 -- Despejando dados para a tabela `tb_user`
 --
 
-INSERT INTO `tb_user` (`ID`, `nome`, `img`, `cargo`, `nivel`, `xp`, `email`, `senha`) VALUES
+INSERT INTO `tb_user` (`id`, `nome`, `img`, `cargo`, `nivel`, `xp`, `email`, `senha`) VALUES
 (28, 'Wesley', 'uploads/IMG-20240804-WA0054.jpg', 'USER', 1, 63, 'wesley@gmail.com', '1234567'),
 (29, 'admin', 'uploads/Default_Create_a_logo_for_a_web_development_agency_that_convey_0.jpg', 'ADMIN', 3, 261, 'conradtsamuel@gmail.com', '1234567');
 
@@ -192,7 +192,7 @@ ALTER TABLE `tb_produtos`
 -- Índices de tabela `tb_user`
 --
 ALTER TABLE `tb_user`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -226,7 +226,7 @@ ALTER TABLE `tb_produtos`
 -- AUTO_INCREMENT de tabela `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Restrições para tabelas despejadas
@@ -236,7 +236,7 @@ ALTER TABLE `tb_user`
 -- Restrições para tabelas `tb_carrinho`
 --
 ALTER TABLE `tb_carrinho`
-  ADD CONSTRAINT `tb_carrinho_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `tb_user` (`ID`),
+  ADD CONSTRAINT `tb_carrinho_ibfk_1` FOREIGN KEY (`usuario_id`) REFERENCES `tb_user` (`id`),
   ADD CONSTRAINT `tb_carrinho_ibfk_2` FOREIGN KEY (`produto_id`) REFERENCES `tb_produtos` (`id`);
 
 --

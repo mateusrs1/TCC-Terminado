@@ -73,20 +73,26 @@ class Pedido {
     
 
     // Método para obter todos os pedidos (para ADMIN e COZINHEIRO)
-    public static function obterTodosPedidos() {
+    public static function obterTodosPedidos($status = null) {
         self::verificarAdminCozinheiro();
-        
+    
         try {
             $pdo = MySql::conectar();
     
-            // Ordenar por status e depois por data de criação
-            $sql = $pdo->prepare("SELECT p.*, pi.produto_id, pi.quantidade, pi.preco, m.nome, u.nome AS usuario_nome 
-                                  FROM `tb_pedidos` p 
-                                  JOIN `tb_pedido_itens` pi ON p.id = pi.pedido_id 
-                                  JOIN `tb_produtos` m ON pi.produto_id = m.id 
-                                  JOIN `tb_user` u ON p.usuario_id = u.id 
-                                  ORDER BY p.`data_criacao` DESC");
-            $sql->execute();
+            $query = "SELECT p.*, pi.produto_id, pi.quantidade, pi.preco, m.nome, u.nome AS usuario_nome 
+                      FROM `tb_pedidos` p 
+                      JOIN `tb_pedido_itens` pi ON p.id = pi.pedido_id 
+                      JOIN `tb_produtos` m ON pi.produto_id = m.id 
+                      JOIN `tb_user` u ON p.usuario_id = u.id";
+            
+            if ($status) {
+                $query .= " WHERE p.`status` = ?";
+            }
+            
+            $query .= " ORDER BY p.`data_criacao` DESC";
+    
+            $sql = $pdo->prepare($query);
+            $status ? $sql->execute([$status]) : $sql->execute();
             
             return $sql->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
@@ -94,6 +100,7 @@ class Pedido {
             return [];
         }
     }
+    
     
 
     // Método para obter itens dos pedidos

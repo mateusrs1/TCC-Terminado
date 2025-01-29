@@ -481,7 +481,6 @@ body {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px;
     margin: 20px;
     width: 100%;
@@ -656,4 +655,89 @@ body {
 
 .container-table button[name="excluir_usuario"]:hover {
     background-color: #c61c1c;
+}
+
+.filter-form {
+    margin-bottom: 20px;
+}
+
+.filter-form label {
+    margin-right: 10px;
+}
+
+.filter-form select {
+    margin-right: 10px;
+}
+
+.filter-form button {
+    padding: 5px 10px;
+}
+
+.filtro-produtos {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtro-produtos input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 150px;
+}
+
+.filtro-produtos button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filtro-produtos button:hover {
+    background-color: #218838;
+}
+
+.filtro-produtos input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px; 
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }

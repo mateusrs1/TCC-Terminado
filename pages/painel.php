@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mensagem = 'Erro ao atualizar o cargo!';
             }
         } else {
-            $mensagem = 'ID do usuário ou novo cargo não fornecido!';
+            $mensagem = 'id do usuário ou novo cargo não fornecido!';
         }
     } elseif (isset($_POST['excluir_usuario'])) {
         $user_id = $_POST['user_id'];
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mensagem = 'Erro ao excluir o usuário!';
             }
         } else {
-            $mensagem = 'ID do usuário não fornecido!';
+            $mensagem = 'id do usuário não fornecido!';
         }
     }
 }
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>id</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Cargo</th>
@@ -53,13 +53,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <tbody>
             <?php foreach ($usuarios as $usuario): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($usuario['ID']); ?></td>
+                    <td><?php echo htmlspecialchars($usuario['id']); ?></td>
                     <td><?php echo htmlspecialchars($usuario['nome']); ?></td>
                     <td><?php echo htmlspecialchars($usuario['email']); ?></td>
                     <td><?php echo htmlspecialchars($usuario['cargo']); ?></td>
                     <td>
                         <form method="post" style="display:inline-block;">
-                            <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($usuario['ID']); ?>">
+                            <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($usuario['id']); ?>">
                             <select name="cargo"> <!-- Corrigido para usar o nome correto do campo -->
                                 <option value="ADMIN" <?php if ($usuario['cargo'] === 'ADMIN') echo 'selected'; ?>>ADMIN</option>
                                 <option value="USER" <?php if ($usuario['cargo'] === 'USER') echo 'selected'; ?>>USER</option>
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <button type="submit" name="update_cargo">Atualizar Cargo</button>
                         </form>
                         <form method="post" style="display:inline-block;">
-                            <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($usuario['ID']); ?>">
+                            <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($usuario['id']); ?>">
                             <button type="submit" name="excluir_usuario" onclick="return confirm('Tem certeza que deseja excluir este usuário?');">Excluir</button>
                         </form>
                     </td>
