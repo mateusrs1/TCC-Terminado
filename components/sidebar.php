@@ -1,3 +1,7 @@
+<?php
+$url = isset($_GET['url']) ? $_GET['url'] : 'home';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,9 +15,10 @@
 <div class="sidebar">
     <div class="profile">
         <a href="perfil" style="text-decoration: none;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Placeholder_no_text.svg/1024px-Placeholder_no_text.svg.png" alt="Profile Picture">
-            <h2>Seu Nome Top Aqui</h2>
-            <h3>Admin</h3>
+            <img src="<?php echo $_SESSION['img']; ?>" alt="Foto de Perfil">
+            <h2><?php echo $_SESSION['nome']; ?></h2>
+            <h3><?php echo $_SESSION['cargo']; ?></h3>
+            <h3>Nível <?php echo $_SESSION['nivel']; ?></h3>
             <a href="<?php echo INCLUDE_PATH; ?>logout.php" class="logout-button">Sair</a>
         </a>
     </div>
@@ -27,5 +32,3 @@
     </nav>
     <img class="logo" src="<?php echo INCLUDE_PATH; ?>/public/logos/Nutribox.png" alt="Nutribox">
 </div>
-</body>
-</html>

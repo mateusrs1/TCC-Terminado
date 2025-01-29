@@ -7,7 +7,7 @@ $pagePath = "pages/" . $url . ".php";
 
 $publicPages = ['login', 'cadastro'];
 
-if (@isset($_SESSION['login']) || in_array($url, $publicPages)) {
+if (isset($_SESSION['login']) || in_array($url, $publicPages)) {
     if (file_exists($pagePath)) {
         if (!in_array($url, $publicPages)) {
             include("components/sidebar.php");
